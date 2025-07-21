@@ -88,8 +88,6 @@ class VideoStore {
         System.out.println("--------------------------------------------------");
     }
 }
-
-
 public class VideoLauncher {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
