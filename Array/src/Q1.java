@@ -15,13 +15,27 @@ public class Q1 {
         for(int i=0;i<n;i++){
             sum+=arr[i];
         }
-        int max=0;
+        int max1=0;
+        int min1=Integer.MAX_VALUE;
+        int max2=0;
+        int min2=min1;
+        for(int i=0;i<n;i++){
+            if(arr[i]>max1){
+                max1=arr[i];
+            }
+
+            if(arr[i]<min1){
+                min1=arr[i];
+            }
+
+        }
         int min=Integer.MAX_VALUE;
         for(int i=0;i<n;i++){
-            if(arr[i]>max){
-                max=arr[i];
+            if(max1>arr[i]){
+                max2=arr[i];
             }
-            if(arr[i]<min){
+            if(arr[i]>min1&&min>arr[i]){
+                min2=arr[i];
                 min=arr[i];
             }
         }
@@ -37,14 +51,18 @@ public class Q1 {
         System.out.println("The sum is: "+sum);
         System.out.println("The Avg is: "+sum/n);
         //Q2
-        System.out.println("The Min value is: "+min);
-        System.out.println("The max value is: "+max);
+        System.out.println("The Min value is: "+min1);
+        System.out.println("The max value is: "+max1);
         //Q3
         if(ans!=-1){
             System.out.println("The array contains given number");
         }else{
             System.out.println("The array doesn't contain number");
         }
+        //Q5
+        System.out.println("The 1st and 2nd largest number is "+ max1+","+max2);
+        System.out.println("The 1st and 2nd smallest number is "+ min1+","+min2);
+
 
 
     }
